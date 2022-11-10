@@ -1,0 +1,221 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira Code", monospace;
+}
+
+:root {
+	--cursor-height: 1.3em;
+	--image-height: 150px;
+	--main-color: rgba(27, 27, 50, 0.9);
+	--main-color-diluted: rgba(27, 27, 50, 0.7);
+	--secondary-color: rgba(42, 42, 64, 0.9);
+	--headings-offset: 0%;
+}
+
+body {
+	/*this is essential for the canvas to have a height of 100%:*/
+	position: relative;
+	background-color: white;
+	/*height: 100%;*/
+	/*width: 100%;*/
+	border: 1px solid white;
+}
+
+.big_title {
+	width: fit-content;
+	margin: 2em auto;
+	background-color: var(--main-color);
+	color: white;
+	width: 100%;
+	text-align: center;
+}
+
+.big_title h1 {
+	font-family: "Sacramento", cursive;
+}
+
+.contents {
+	width: 75%;
+	margin: auto;
+	padding: 1em;
+	/* border: 1px solid white; */
+	animation: glow 1s linear 0 infinite;
+	background-color: var(--main-color-diluted);
+}
+
+.manifesto_text {
+	margin-left: 5%;
+	padding: 1em 0;
+	color: white;
+}
+
+h2, .big_title {
+	box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.75);
+	border-radius: 5px;
+}
+h2 {
+	color: green;
+	font-family: "Fira Code", monospace;
+	background-color: var(--secondary-color);
+	/*-webkit-text-stroke: 0.1px blue;*/
+}
+
+.quote {
+	min-height: calc(var(--image-height) + 25px);
+	padding: 1em;
+}
+
+.quote img {
+	display: inline;
+	height: var(--image-height);
+	float: left;
+	margin: 0 0.5em;
+	border-radius: 5%;
+}
+
+.quote img:hover {
+	animation: grow 0.3s linear 0s 1 forwards;
+}
+
+.quote blockquote {
+	display: inline;
+}
+
+blockquote:after {
+	content: '"';
+}
+blockquote:before {
+	content: '"';
+}
+
+.author:before {
+	content: "-";
+}
+.author {
+	width: fit-content;
+	float: right;
+}
+
+.headers {
+	position: relative;
+	/* font-family: "Fira Mono", monospace; */
+}
+
+.bar {
+	position: absolute;
+	top: calc(50% - var(--cursor-height) / 2);
+	left: calc(var(--headings-offset));
+	width: 2px;
+	height: var(--cursor-height);
+	background-color: white;
+}
+
+.bar.one {
+	animation: blink 1s linear 0s infinite normal,
+		cursor_move 17s step-end 0s infinite normal;
+}
+
+.bar.two {
+	animation: blink 1s linear 0s infinite normal,
+		cursor_move 17s step-end 1.3s infinite normal;
+}
+
+.bar.three {
+	animation: blink 1s linear 0s infinite normal,
+		cursor_move 17s step-end 3.1s infinite normal;
+}
+
+.bar.four {
+	animation: blink 1s linear 0s infinite normal,
+		cursor_move 17s step-end 0.3s infinite normal;
+}
+
+@keyframes blink {
+	from {
+		opacity: 100%;
+	}
+	to {
+		opacity: 0%;
+	}
+}
+
+@keyframes cursor_move {
+	0% {
+		left: calc(1.5em + var(--headings-offset));
+	}
+	20% {
+		left: calc(4.5em + var(--headings-offset));
+	}
+	40% {
+		left: calc(3em + var(--headings-offset))
+	}
+	60% {
+		left: calc(var(--headings-offset))
+	}
+	80% {
+		left: calc(6em + var(--headings-offset))
+	}
+
+	100% {
+		left: calc(1.5em + var(--headings-offset))
+	}
+}
+
+@keyframes glow {
+	0% {
+		border: none;
+	}
+
+	100% {
+		border: 1px solid white;
+	}
+}
+
+@keyframes grow {
+	from {
+		transform: none;
+	}
+	to {
+		transform: scale(1.1);
+	}
+}
+
+@media screen and (max-width: 650px) {
+	:root {
+		--headings-offset: 35%;
+	}
+
+	.contents {
+		width: 98%;
+	}
+	h1,
+	h2 {
+		width: 100%;
+		text-align: center;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	* {
+		display: none;
+	}
+}
+
+.code_of_conduct p:before {
+	content: "* ";
+}
+
+
+#particles-js {
+	top: 0;
+	position: absolute;
+	background-color: var(--secondary-color);
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
