@@ -1,10 +1,3 @@
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: "Fira Code", monospace;
-}
-
 :root {
 	--cursor-height: 1.3em;
 	--image-height: 150px;
@@ -16,7 +9,18 @@
 	--img-scale-up: 1.1;
 	--book-top-offset: 35px;
 	--book-width: 80px;
+	--headings-color: #39FF14;
+	--headings-font: 'IBM Plex Mono', monospace;
+	--text-font: "Fira Code", monospace;
 }
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--text-font);
+}
+
 
 body {
 	/*this is essential for the canvas to have a height of 100%:*/
@@ -82,8 +86,8 @@ h2, .big_title {
 }
 
 h2 {
-	color: green;
-	font-family: "Fira Code", monospace;
+	color: var(--headings-color);
+	font-family: var(--headings-font);
 	background-color: var(--secondary-color);
 	/*-webkit-text-stroke: 0.1px blue;*/
 }
