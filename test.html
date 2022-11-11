@@ -1,15 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<!-- <p>Lorem ipsum dolor sit amet.</p> -->
-		<div id="particles-js"></div>
-		<script src="particles.js"></script>
-		<script src="script.js"></script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+</head>
+<body>
+<svg class="hamburger" viewBox="0 0 100 80" width="40" height="40">
+	<rect width="100" height="20"></rect>
+	<rect y="30" width="100" height="20"></rect>
+	<rect y="60" width="100" height="20"></rect>
+</svg>
+
+<header>
+	<div class="menu">
+		<button class="name">Home</button>
+		<div class="options">
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+		</div>
+	</div>
+
+	<div class="menu">
+		<button class="name">News</button>
+		<div class="options">
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+		</div>
+	</div>
+
+	<div class="menu">
+		<button class="name">Register</button>
+		<div class="options">
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+		</div>
+	</div>
+
+	<div class="menu">
+		<button class="name">Log In</button>
+		<div class="options">
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+		</div>
+	</div>
+
+	<div class="menu right">
+		<button class="name">Menu</button>
+		<div class="options">
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+			<div class="option">op1</div>
+		</div>
+	</div>
+</header>
+<h1>Welcome!</h1>
+</body>
 </html>
+
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	header {
+		display: flex;
+	}
+
+	.menu {
+		position: relative;
+		margin-right: 1em;
+		/* width: 5em; */
+	}
+
+	.options {
+		position: absolute;
+		text-align: center;
+		background-color: bisque;
+		width: 100%;
+		opacity: 0;
+		transition: opacity 0.4s linear;
+	}
+
+	.name:focus + .options {
+		opacity: 100%;
+		z-index: 99;
+	}
+
+	.right {
+		margin-left: auto;
+	}
+
+	.menu > button {
+		background-color: inherit;
+		border: none;
+		width: 100%;
+	}
+
+	.hamburger {
+		position: absolute;
+		opacity: 0;
+	}
+
+	@media (max-width: 400px) {
+		header {
+			flex-direction: column;
+		}
+
+		.menu {
+			width: 100%;
+			text-align: center;
+		}
+
+		.options {
+			width: 100%;
+			text-align: center;
+			background-color: bisque;
+		}
+
+		.hamburger {
+			opacity: 100;
+			z-index: 2;
+		}
+
+		header {
+			opacity: 0;
+		}
+
+		.hamburger:hover + header {
+			opacity: 100%;
+		}
+	}
+</style>
