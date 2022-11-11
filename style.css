@@ -24,11 +24,11 @@
 
 body {
 	/*this is essential for the canvas to have a height of 100%:*/
-	position: relative;
+	/*position: relative;*/
 	background-color: white;
 	/*height: 100%;*/
 	/*width: 100%;*/
-	border: 1px solid white;
+	/*border: 1px solid white;*/
 }
 
 .book > img {
@@ -287,7 +287,7 @@ blockquote:before {
 
 #particles-js {
 	top: 0;
-	position: absolute;
+	position: fixed;
 	background-color: var(--secondary-color);
 	width: 100%;
 	height: 100%;
