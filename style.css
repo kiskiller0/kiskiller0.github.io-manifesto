@@ -23,12 +23,7 @@
 
 
 body {
-	/*this is essential for the canvas to have a height of 100%:*/
-	/*position: relative;*/
 	background-color: white;
-	/*height: 100%;*/
-	/*width: 100%;*/
-	/*border: 1px solid white;*/
 }
 
 .book > img {
