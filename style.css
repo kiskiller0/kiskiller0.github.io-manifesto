@@ -39,7 +39,7 @@ body {
 	height: var(--logo-height);
 	border: 1px solid white;
 	float: left;
-	margin-right: 1em;
+	margin-right: 0.3em;
 	font-size: 50px;
 }
 
