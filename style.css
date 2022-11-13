@@ -1,4 +1,8 @@
 :root {
+	/*logo variables*/
+	--logo-width: 100px;
+	--logo-height: 100px;
+	/*eo_ logo variables*/
 	--cursor-height: 1.3em;
 	--image-height: 150px;
 	--main-color: rgba(27, 27, 50, 0.9);
@@ -25,6 +29,35 @@
 body {
 	background-color: white;
 }
+
+
+
+/*logo stuff:*/
+.logo {
+	position: relative;
+	width: var(--logo-width);
+	height: var(--logo-height);
+	border: 1px solid white;
+	float: left;
+	margin-right: 1em;
+	font-size: 50px;
+}
+
+.sign {
+	transform: rotate(-90deg);
+	position: absolute;
+	left: 35%;
+	top: -10%;
+	color: var(--headings-color);
+	animation: blink 1s linear 0s infinite alternate-reverse;
+}
+.c {
+	position: absolute;
+	left: 35%;
+	top: 25%;
+}
+/*eo_ logo stuff*/
+
 
 .book > img {
 	width:var(--book-width);
@@ -249,6 +282,7 @@ blockquote:before {
 	}
 }
 
+
 @media screen and (max-width: 400px) {
 	:root {
 		--img-scale-up: 1.6;
@@ -263,10 +297,12 @@ blockquote:before {
 		width: 100px;
 		height: auto;
 		margin-bottom: 1em;
-		/*width: auto;*/
 	}
 
-
+	.logo {
+		margin-right: 0;
+		margin-bottom: 0.5em;
+	}
 	.quote .author {
 		margin-left: auto;
 	}
