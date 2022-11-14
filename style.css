@@ -13,8 +13,8 @@
 	--img-scale-up: 1.1;
 	--book-top-offset: 35px;
 	--book-width: 80px;
-	--headings-color: #39FF14;
-	--headings-font: 'IBM Plex Mono', monospace;
+	--headings-color: #39ff14;
+	--headings-font: "IBM Plex Mono", monospace;
 	--text-font: "Fira Code", monospace;
 }
 
@@ -25,12 +25,9 @@
 	font-family: var(--text-font);
 }
 
-
 body {
 	background-color: white;
 }
-
-
 
 /*logo stuff:*/
 .logo {
@@ -40,6 +37,7 @@ body {
 	border: 1px solid white;
 	float: left;
 	margin-right: 0.3em;
+	margin-bottom: 0.3em;
 	font-size: 50px;
 }
 
@@ -58,13 +56,12 @@ body {
 }
 /*eo_ logo stuff*/
 
-
 .book > img {
-	width:var(--book-width);
+	width: var(--book-width);
 	position: absolute;
 	/*top: var(--book-top-offset);*/
 	top: -15px;
-	left: calc(50% - var(--book-width)/2);
+	left: calc(50% - var(--book-width) / 2);
 	animation: levitate 3s linear 0s infinite alternate;
 	z-index: 1;
 }
@@ -106,10 +103,11 @@ a {
 	color: white;
 }
 
-h2, .big_title {
-	box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.75);
-	-webkit-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.75);
+h2,
+.big_title {
+	box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.75);
 	border-radius: 5px;
 }
 
@@ -117,7 +115,6 @@ h2 {
 	color: var(--headings-color);
 	font-family: var(--headings-font);
 	background-color: var(--secondary-color);
-	/*-webkit-text-stroke: 0.1px blue;*/
 }
 
 .quote {
@@ -146,13 +143,13 @@ h2 {
 	display: inline;
 }
 
-blockquote:after {
+/* blockquote:after {
 	content: '"';
 }
 
 blockquote:before {
 	content: '"';
-}
+} */
 
 .author:before {
 	content: "-";
@@ -213,17 +210,17 @@ blockquote:before {
 		left: calc(4.5em + var(--headings-offset));
 	}
 	40% {
-		left: calc(3em + var(--headings-offset))
+		left: calc(3em + var(--headings-offset));
 	}
 	60% {
-		left: calc(var(--headings-offset))
+		left: calc(var(--headings-offset));
 	}
 	80% {
-		left: calc(6em + var(--headings-offset))
+		left: calc(6em + var(--headings-offset));
 	}
 
 	100% {
-		left: calc(1.5em + var(--headings-offset))
+		left: calc(1.5em + var(--headings-offset));
 	}
 }
 
@@ -281,7 +278,6 @@ blockquote:before {
 		margin: auto;
 	}
 }
-
 
 @media screen and (max-width: 400px) {
 	:root {
