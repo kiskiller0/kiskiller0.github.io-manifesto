@@ -16,6 +16,7 @@
 	--headings-color: #39ff14;
 	--headings-font: "IBM Plex Mono", monospace;
 	--text-font: "Fira Code", monospace;
+	--animation-background: linear-gradient(45deg, #452c63, #33006f);
 }
 
 * {
@@ -143,13 +144,6 @@ h2 {
 	display: inline;
 }
 
-/* blockquote:after {
-	content: '"';
-}
-
-blockquote:before {
-	content: '"';
-} */
 
 .author:before {
 	content: "-";
@@ -315,7 +309,7 @@ blockquote:before {
 #particles-js {
 	top: 0;
 	position: fixed;
-	background-color: var(--secondary-color);
+	background: var(--animation-background);
 	width: 100%;
 	height: 100%;
 	z-index: -1;
